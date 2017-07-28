@@ -13,6 +13,7 @@
 @property (weak, nonatomic) UIButton *addBtn;
 @property (weak, nonatomic) UIButton *removeBtn;
 @property (strong, nonatomic) NSArray *shops;
+@property (weak, nonatomic) IBOutlet UILabel *hub;
 
 @end
 
@@ -72,6 +73,7 @@
     self.addBtn = [self createBtnWithImage:@"add" highLightedImage:@"add_highlighted" disabledImage:@"add_disabled" frame:CGRectMake(30, 30, 50, 50) selector:@selector(add)];
     self.removeBtn = [self createBtnWithImage:@"remove" highLightedImage:@"remove_highlighted" disabledImage:@"remove_disabled" frame:CGRectMake(300, 30, 50, 50) selector:@selector(remove)];
     [self.removeBtn setEnabled:NO];
+    self.hub.alpha = 0;
 }
 
 
@@ -114,5 +116,19 @@
 - (void) checkBtnState {
     self.removeBtn.enabled = (self.shopView.subviews.count != 0);
     self.addBtn.enabled = (self.shopView.subviews.count < self.shops.count);
+    NSString *text = nil;
+    if(self.addBtn.enabled == NO) {
+        text = @"已经加满啦！";
+    } else if(self.removeBtn.enabled == NO) {
+        text = @"已经删光啦！";
+    }
+    if(!text) return;
+    self.hub.text = text;
+    self.hub.alpha = 1.0;
+    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(hideHub) userInfo:nil repeats:NO];
+}
+- (void) hideHub {
+    self.hub.alpha = 0;
+
 }
 @end
