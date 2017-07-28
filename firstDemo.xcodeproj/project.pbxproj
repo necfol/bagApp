@@ -15,6 +15,7 @@
 		F18658D41F2A35AE00D87BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18658D31F2A35AE00D87BE3 /* Assets.xcassets */; };
 		F18658D71F2A35AE00D87BE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18658D51F2A35AE00D87BE3 /* LaunchScreen.storyboard */; };
 		F1CBF6271F2B62F80078DF62 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CBF6261F2B62F80078DF62 /* Shop.m */; };
+		F1CBF62A1F2B74FB0078DF62 /* NecfolShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CBF6291F2B74FB0078DF62 /* NecfolShopView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		F18658D81F2A35AE00D87BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1CBF6251F2B62F80078DF62 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
 		F1CBF6261F2B62F80078DF62 /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
+		F1CBF6281F2B74FB0078DF62 /* NecfolShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NecfolShopView.h; sourceTree = "<group>"; };
+		F1CBF6291F2B74FB0078DF62 /* NecfolShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NecfolShopView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				F18658CB1F2A35AE00D87BE3 /* AppDelegate.m */,
 				F18658CD1F2A35AE00D87BE3 /* ViewController.h */,
 				F18658CE1F2A35AE00D87BE3 /* ViewController.m */,
+				F1CBF6281F2B74FB0078DF62 /* NecfolShopView.h */,
+				F1CBF6291F2B74FB0078DF62 /* NecfolShopView.m */,
 				F18658D01F2A35AE00D87BE3 /* Main.storyboard */,
 				F18658D31F2A35AE00D87BE3 /* Assets.xcassets */,
 				F18658D51F2A35AE00D87BE3 /* LaunchScreen.storyboard */,
@@ -113,6 +118,7 @@
 		F18658BC1F2A35AE00D87BE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Necfol;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Necfol;
 				TargetAttributes = {
@@ -161,6 +167,7 @@
 			files = (
 				F18658CF1F2A35AE00D87BE3 /* ViewController.m in Sources */,
 				F18658CC1F2A35AE00D87BE3 /* AppDelegate.m in Sources */,
+				F1CBF62A1F2B74FB0078DF62 /* NecfolShopView.m in Sources */,
 				F18658C91F2A35AE00D87BE3 /* main.m in Sources */,
 				F1CBF6271F2B62F80078DF62 /* Shop.m in Sources */,
 			);

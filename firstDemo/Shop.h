@@ -15,7 +15,8 @@
 /**商品图片*/
 @property (nonatomic, strong) NSString *img;
 
-- (Shop *)initWithDic: (NSDictionary *)dic;
+- (instancetype)initWithDic: (NSDictionary *)dic;
 //类方法名通常以类名开头
-+ (Shop *)shopWithDic: (NSDictionary *)dic;
++ (instancetype)shopWithDic: (NSDictionary *)dic;
+
 @end

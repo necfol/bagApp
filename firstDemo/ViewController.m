@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "NecfolShopView.h"
 #import "Shop.h"
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *shopView;
@@ -33,7 +35,12 @@
 
 - (NSArray *) shops {
     if(!_shops) {
-        _shops = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shops" ofType:@"plist"]];
+        NSArray *dicArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shops" ofType:@"plist"]];
+        NSMutableArray *shopsArray = [NSMutableArray array];
+        for (NSDictionary *shop in dicArray) {
+            [shopsArray addObject:[Shop shopWithDic:shop]];
+        }
+        _shops = shopsArray;
     }
     return _shops;
 }
@@ -44,39 +51,33 @@
     [self.removeBtn setEnabled:NO];
     self.hub.alpha = 0;
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 - (void) add {
     int cols = 3;
     CGFloat shopW = 70;
     CGFloat shopH = 90;
     CGFloat colMargin = (self.shopView.frame.size.width - cols * shopW) / (cols - 1);
     NSUInteger index = self.shopView.subviews.count;
-    NSDictionary * dic = self.shops[index];
-    
-    Shop *shop = [Shop shopWithDic:dic];
-    
     NSUInteger col = index % cols;
     CGFloat shopX = col * (shopW + colMargin);
     NSUInteger rowMargin = 10;
     NSUInteger row = index / cols;
     CGFloat shopY = row * (shopH + rowMargin);
-    UIView *shopItem = [[UIView alloc] init];
+    NecfolShopView *shopItem = [[NecfolShopView alloc] init];
+    shopItem.shop = self.shops[index];
     shopItem.frame = CGRectMake(shopX, shopY, shopW, shopH);
-    UIImageView *img = [[UIImageView alloc] init];
-    img.image = [UIImage imageNamed:shop.img];
-    img.frame = CGRectMake(0, 0, shopW, shopW); 
-    UILabel *label = [[UILabel alloc] init];
-    label.text = shop.text;
-    label.frame = CGRectMake(0, shopW, shopW, shopH - shopW);
-    label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont systemFontOfSize:12];
-    [shopItem addSubview:img];
-    [shopItem addSubview:label];
+//    UIImageView *img = [[UIImageView alloc] init];
+//    img.image = [UIImage imageNamed:shop.img];
+//    img.frame = CGRectMake(0, 0, shopW, shopW); 
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = shop.text;
+//    label.frame = CGRectMake(0, shopW, shopW, shopH - shopW);
+//    label.textAlignment = NSTextAlignmentCenter;
+//    label.font = [UIFont systemFontOfSize:12];
+//    [shopItem addSubview:img];
+//    [shopItem addSubview:label];
     [self.shopView addSubview:shopItem];
     [self checkBtnState];
 

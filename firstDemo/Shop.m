@@ -9,7 +9,7 @@
 #import "Shop.h"
 
 @implementation Shop
--(Shop *)initWithDic:(NSDictionary *)dic {
+-(instancetype)initWithDic:(NSDictionary *)dic {
     if(self = [super init]) {
         self.text = dic[@"text"];
         self.img = dic[@"img"];
@@ -18,7 +18,7 @@
 }
 
 //类方法名通常以类名开头
-+(Shop *)shopWithDic:(NSDictionary *)dic {
++(instancetype)shopWithDic:(NSDictionary *)dic {
     return [[Shop alloc]initWithDic:dic];
 }
 
