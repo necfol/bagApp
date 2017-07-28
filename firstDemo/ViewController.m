@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Shop.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *shopView;
@@ -32,9 +33,7 @@
 
 - (NSArray *) shops {
     if(!_shops) {
-        NSLog(@"加载数据");
-        NSString *file = [[NSBundle mainBundle] pathForResource:@"shops" ofType:@"plist"];
-        _shops = [NSArray arrayWithContentsOfFile:file];
+        _shops = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shops" ofType:@"plist"]];
     }
     return _shops;
 }
@@ -57,7 +56,10 @@
     CGFloat shopH = 90;
     CGFloat colMargin = (self.shopView.frame.size.width - cols * shopW) / (cols - 1);
     NSUInteger index = self.shopView.subviews.count;
-    NSDictionary * shop = self.shops[index];
+    NSDictionary * dic = self.shops[index];
+    
+    Shop *shop = [Shop shopWithDic:dic];
+    
     NSUInteger col = index % cols;
     CGFloat shopX = col * (shopW + colMargin);
     NSUInteger rowMargin = 10;
@@ -66,10 +68,10 @@
     UIView *shopItem = [[UIView alloc] init];
     shopItem.frame = CGRectMake(shopX, shopY, shopW, shopH);
     UIImageView *img = [[UIImageView alloc] init];
-    img.image = [UIImage imageNamed:shop[@"img"]];
+    img.image = [UIImage imageNamed:shop.img];
     img.frame = CGRectMake(0, 0, shopW, shopW); 
     UILabel *label = [[UILabel alloc] init];
-    label.text = shop[@"text"];
+    label.text = shop.text;
     label.frame = CGRectMake(0, shopW, shopW, shopH - shopW);
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:12];

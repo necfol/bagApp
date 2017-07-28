@@ -14,6 +14,7 @@
 		F18658D21F2A35AE00D87BE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18658D01F2A35AE00D87BE3 /* Main.storyboard */; };
 		F18658D41F2A35AE00D87BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18658D31F2A35AE00D87BE3 /* Assets.xcassets */; };
 		F18658D71F2A35AE00D87BE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18658D51F2A35AE00D87BE3 /* LaunchScreen.storyboard */; };
+		F1CBF6271F2B62F80078DF62 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CBF6261F2B62F80078DF62 /* Shop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		F18658D31F2A35AE00D87BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F18658D61F2A35AE00D87BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F18658D81F2A35AE00D87BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1CBF6251F2B62F80078DF62 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		F1CBF6261F2B62F80078DF62 /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				F18658D81F2A35AE00D87BE3 /* Info.plist */,
 				F149B69F1F2B2FE000423B48 /* shops.plist */,
 				F18658C71F2A35AE00D87BE3 /* Supporting Files */,
+				F1CBF6251F2B62F80078DF62 /* Shop.h */,
+				F1CBF6261F2B62F80078DF62 /* Shop.m */,
 			);
 			path = firstDemo;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				F18658CF1F2A35AE00D87BE3 /* ViewController.m in Sources */,
 				F18658CC1F2A35AE00D87BE3 /* AppDelegate.m in Sources */,
 				F18658C91F2A35AE00D87BE3 /* main.m in Sources */,
+				F1CBF6271F2B62F80078DF62 /* Shop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
