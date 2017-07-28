@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F149B6A01F2B2FE000423B48 /* shops.plist in Resources */ = {isa = PBXBuildFile; fileRef = F149B69F1F2B2FE000423B48 /* shops.plist */; };
 		F18658C91F2A35AE00D87BE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F18658C81F2A35AE00D87BE3 /* main.m */; };
 		F18658CC1F2A35AE00D87BE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F18658CB1F2A35AE00D87BE3 /* AppDelegate.m */; };
 		F18658CF1F2A35AE00D87BE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18658CE1F2A35AE00D87BE3 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F149B69F1F2B2FE000423B48 /* shops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shops.plist; sourceTree = "<group>"; };
 		F18658C41F2A35AE00D87BE3 /* firstDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18658C81F2A35AE00D87BE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F18658CA1F2A35AE00D87BE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				F18658D31F2A35AE00D87BE3 /* Assets.xcassets */,
 				F18658D51F2A35AE00D87BE3 /* LaunchScreen.storyboard */,
 				F18658D81F2A35AE00D87BE3 /* Info.plist */,
+				F149B69F1F2B2FE000423B48 /* shops.plist */,
 				F18658C71F2A35AE00D87BE3 /* Supporting Files */,
 			);
 			path = firstDemo;
@@ -139,6 +142,7 @@
 			files = (
 				F18658D71F2A35AE00D87BE3 /* LaunchScreen.storyboard in Resources */,
 				F18658D41F2A35AE00D87BE3 /* Assets.xcassets in Resources */,
+				F149B6A01F2B2FE000423B48 /* shops.plist in Resources */,
 				F18658D21F2A35AE00D87BE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +313,7 @@
 				F18658DD1F2A35AE00D87BE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

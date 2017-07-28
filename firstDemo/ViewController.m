@@ -32,44 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.shops = @[
-                   @{
-                       @"text": @"单肩包",
-                       @"img": @"danjianbao"
-                       },
-                   @{
-                       @"text": @"链条包",
-                       @"img": @"liantiaobao"
-                       },
-                   @{
-                       @"text": @"钱包",
-                       @"img": @"qianbao"
-                       },
-                   @{
-                       @"text": @"手提包",
-                       @"img": @"shoutibao"
-                       },
-                   @{
-                       @"text": @"双肩包",
-                       @"img": @"shuangjianbao"
-                       },
-                   @{
-                       @"text": @"斜挎包",
-                       @"img": @"xiekuabao"
-                       },
-                   @{
-                       @"text": @"单肩包",
-                       @"img": @"danjianbao"
-                       },
-                   @{
-                       @"text": @"单肩包",
-                       @"img": @"danjianbao"
-                       },
-                   @{
-                       @"text": @"单肩包",
-                       @"img": @"danjianbao"
-                       }
-                   ];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *file = [bundle pathForResource:@"shops" ofType:@"plist"];
+    self.shops = [NSArray arrayWithContentsOfFile:file];
     self.addBtn = [self createBtnWithImage:@"add" highLightedImage:@"add_highlighted" disabledImage:@"add_disabled" frame:CGRectMake(30, 30, 50, 50) selector:@selector(add)];
     self.removeBtn = [self createBtnWithImage:@"remove" highLightedImage:@"remove_highlighted" disabledImage:@"remove_disabled" frame:CGRectMake(300, 30, 50, 50) selector:@selector(remove)];
     [self.removeBtn setEnabled:NO];
