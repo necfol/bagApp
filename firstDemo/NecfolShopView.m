@@ -32,20 +32,38 @@
     return [[self alloc] init];
 }
 
-/**
- init默认会调用initwithframe:方法
- */
--(instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+-(UIImageView *)img {
+    if(_img == nil) {
         self.img = [[UIImageView alloc] init];
+        [self addSubview:_img];
+    }
+    return _img;
+}
+
+-(UILabel *)label {
+    if(_label == nil) {
         self.label = [[UILabel alloc] init];
         self.label.textAlignment = NSTextAlignmentCenter;
         self.label.font = [UIFont systemFontOfSize:12];
-        [self addSubview:self.img];
-        [self addSubview:self.label];
+        [self addSubview:_label];
     }
-    return self;
+    return _label; 
 }
+/**
+ init默认会调用initwithframe:方法
+ */
+//改为懒加载方式
+//-(instancetype)initWithFrame:(CGRect)frame {
+//    if (self = [super initWithFrame:frame]) {
+//        self.img = [[UIImageView alloc] init];
+//        self.label = [[UILabel alloc] init];
+//        self.label.textAlignment = NSTextAlignmentCenter;
+//        self.label.font = [UIFont systemFontOfSize:12];
+//        [self addSubview:self.img];
+//        [self addSubview:self.label];
+//    }
+//    return self;
+//}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
