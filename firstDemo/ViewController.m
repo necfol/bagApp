@@ -30,11 +30,16 @@
     return btn;
 }
 
+- (NSArray *) shops {
+    if(!_shops) {
+        NSLog(@"加载数据");
+        NSString *file = [[NSBundle mainBundle] pathForResource:@"shops" ofType:@"plist"];
+        _shops = [NSArray arrayWithContentsOfFile:file];
+    }
+    return _shops;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *file = [bundle pathForResource:@"shops" ofType:@"plist"];
-    self.shops = [NSArray arrayWithContentsOfFile:file];
     self.addBtn = [self createBtnWithImage:@"add" highLightedImage:@"add_highlighted" disabledImage:@"add_disabled" frame:CGRectMake(30, 30, 50, 50) selector:@selector(add)];
     self.removeBtn = [self createBtnWithImage:@"remove" highLightedImage:@"remove_highlighted" disabledImage:@"remove_disabled" frame:CGRectMake(300, 30, 50, 50) selector:@selector(remove)];
     [self.removeBtn setEnabled:NO];
