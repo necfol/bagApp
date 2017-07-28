@@ -65,7 +65,7 @@
     NSUInteger rowMargin = 10;
     NSUInteger row = index / cols;
     CGFloat shopY = row * (shopH + rowMargin);
-    NecfolShopView *shopItem = [[NecfolShopView alloc] init];
+    NecfolShopView *shopItem = [NecfolShopView ShopView];
     shopItem.shop = self.shops[index];
     shopItem.frame = CGRectMake(shopX, shopY, shopW, shopH);
 //    UIImageView *img = [[UIImageView alloc] init];

@@ -27,8 +27,16 @@
     // Drawing code
 }
 */
--(instancetype)init {
-    if (self = [super init]) {
+
++(instancetype)ShopView {
+    return [[self alloc] init];
+}
+
+/**
+ init默认会调用initwithframe:方法
+ */
+-(instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         self.img = [[UIImageView alloc] init];
         self.label = [[UILabel alloc] init];
         self.label.textAlignment = NSTextAlignmentCenter;

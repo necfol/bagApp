@@ -13,4 +13,5 @@
 /** shop模型*/
 @property (nonatomic, strong) Shop *shop;
 
++(instancetype) ShopView;
 @end
