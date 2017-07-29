@@ -47,7 +47,7 @@
         self.label.font = [UIFont systemFontOfSize:12];
         [self addSubview:_label];
     }
-    return _label; 
+    return _label;
 }
 /**
  init默认会调用initwithframe:方法
